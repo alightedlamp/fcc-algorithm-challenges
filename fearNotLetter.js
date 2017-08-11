@@ -20,3 +20,23 @@ console.log(fearNotLetter("abce"));
 console.log(fearNotLetter("abcdefghjklmno"));
 console.log(fearNotLetter("bcd"));
 console.log(fearNotLetter("yz"));
+
+function fearNotLetter2(str) {
+  let compare = str.charCodeAt(0), missing;
+
+  str.split('').map((letter, i) => {
+    if (str.charCodeAt(i) === compare) {
+      ++compare;
+    }
+    else {
+      missing = String.fromCharCode(compare);
+    }
+  });
+
+  return missing;
+}
+
+console.log(fearNotLetter2("abce"));
+console.log(fearNotLetter2("abcdefghjklmno"));
+console.log(fearNotLetter2("bcd"));
+console.log(fearNotLetter2("yz"));
