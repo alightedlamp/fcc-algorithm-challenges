@@ -1,6 +1,6 @@
 function steamrollArray(arr) {
-  return arr.reduce((flat, toFlatten) => {
-    return flat.concat(Array.isArray(toFlatten) ? steamrollArray(toFlatten) : toFlatten);
+  return arr.reduce((flattened, next) => {
+    return flattened.concat(Array.isArray(next) ? steamrollArray(next) : next);
   }, []);
 }
 
