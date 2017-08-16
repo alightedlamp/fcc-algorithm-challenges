@@ -1,4 +1,6 @@
-// inefficient!
+// Sum all the prime numbers up to and including the provided number.
+
+// My inefficient solution:
 function sumPrimes(num) {
   const nums = [];
 
@@ -20,8 +22,7 @@ function sumPrimes(num) {
 
 console.log(sumPrimes(10)); // 2 + 3 + 5 + 7
 
-// implement sieve!
-
+// Implement sieve! Neat.
 function sumPrimes2(num) {
   var sieve = new Array(num + 1).fill(true);
   var max = Math.ceil(Math.sqrt(num));
