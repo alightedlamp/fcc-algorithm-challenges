@@ -1,3 +1,5 @@
+// Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
 function titleCase(str) {
   var arr = [];
 
@@ -15,4 +17,12 @@ function titleCase(str) {
   return str;
 }
 
-titleCase("I'm a little tea pot");
+function titleCase(str) {
+  return str.toLowerCase().split(' ')
+    .map((word) => {
+      return word.replace(word.charAt(0), word.charAt(0).toUpperCase());
+    }).join(' ');
+}
+
+
+console.log(titleCase("I'm a little tea pot"));
