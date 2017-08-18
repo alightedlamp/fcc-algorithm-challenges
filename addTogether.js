@@ -9,8 +9,12 @@ function addTogether() {
     case 1:
       if (checkNum(x)) {
         const addTwo = function(y) {
-          if (checkNum(y)) return x + y;
-          else return undefined;
+          if (checkNum(y)) {
+            return x + y;
+          }
+          else {
+            return undefined;
+          }
         };
         return addTwo;
       }
