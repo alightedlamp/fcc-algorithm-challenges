@@ -1,5 +1,5 @@
 function sumAll(arr) {
-  arr.sort(function(a, b) { return a - b });
+  arr.sort((x, y) => x - y);
   var start = arr[0];
   var end = arr[1] + 1;
   var sum = 0;
