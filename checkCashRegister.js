@@ -2,7 +2,7 @@ function checkCashRegister(price, cash, cid) {
   cid = cid.reverse();
 
   const changeMap = [100.00, 20.00, 10.00, 5.00, 1.00, 0.25, 0.10, 0.05, 0.01];
-  const totalCash = cid.map(el => el[1]).reduce((sum, denom, i) => sum + denom);
+  const totalCash = cid.reduce((sum, val, i) => sum + val[1], 0);
 
   let changeDue = cash - price;
   // Use an object, because arrays don't make sense for this use-case
